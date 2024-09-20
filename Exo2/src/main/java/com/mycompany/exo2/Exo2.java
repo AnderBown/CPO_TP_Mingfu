@@ -34,6 +34,7 @@ public class Exo2 {
         // Affichage du resultat
         ind = ind + 1;
         }
+        
         System.out.println();
         System.out.println("La somme des "+ nb + "entiers est: "+result); 
     }
