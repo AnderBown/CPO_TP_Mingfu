@@ -19,7 +19,6 @@ public class Calculator {
         
         Scanner sc = new Scanner(System.in);
         System.out.println("Please enter the operator:\n1) add\n2) substract\n3) multiply\n4) divide\n5) modulo");
-        System.out.println();
         int operateur = sc.nextInt();
         System.out.println("Please enter the first number:");
         int operande1 = sc.nextInt();
