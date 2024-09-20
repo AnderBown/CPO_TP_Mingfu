@@ -52,6 +52,7 @@ public class Calculator {
                 case 5:
                     resultat = operande1 % operande2;
                     System.out.println("The result is : " + resultat);
+                    break;
                 default:
                     break;
             }
