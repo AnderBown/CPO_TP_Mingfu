@@ -11,4 +11,5 @@
         <maven.compiler.target>22</maven.compiler.target>
         <exec.mainClass>com.mycompany.tp1_manipnombresint_sun_mingfu.TP1_manipNombresInt_SUN_Mingfu</exec.mainClass>
     </properties>
+    <name>TP1_manipNombresInt_SUN_MINGFU</name>
 </project>
