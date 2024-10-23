@@ -11,6 +11,6 @@ package com.mycompany.premierprojetsurgithub;
 public class PremierProjetSurGithub {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        System.out.println("Hello World!\nhello");
     }
 }
