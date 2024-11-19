@@ -16,7 +16,7 @@ public abstract class Personnage {
     private String nom;
     private int niveauDeVie;
     private ArrayList<Arme> armes;  
-    private Arme armeEnMain;  
+    Arme armeEnMain;  
     
     
     protected static int nbPersonnages = 0;
@@ -32,6 +32,7 @@ public abstract class Personnage {
         nbPersonnages++;
     }
     
+    /*
     @Override
     public void finalize() throws Throwable{
         super.finalize();
@@ -43,8 +44,9 @@ public abstract class Personnage {
         } else if (this instanceof Magicien) {
             nbMagiciens--;
         }
-        System.out.println("Un personnage a ete détruit. Mise à jour des compteurs.");
+        System.out.println("Un personnage a ete detruit. Mise à jour des compteurs.");
     }
+    */
     
     public static int getNbPersonnages() {
         return nbPersonnages;
@@ -93,7 +95,37 @@ public abstract class Personnage {
     public ArrayList<Arme> getArmes() {
         return armes;
     }
-
+    
+    public void seFatiguer() {
+        this.niveauDeVie -= 10;
+        if (this.niveauDeVie < 0) {
+            this.niveauDeVie = 0;
+        }
+    }
+    
+    public boolean estVivant() {
+        return this.niveauDeVie > 0;
+    }
+    
+    public void estAttaque(int points) {
+        this.niveauDeVie -= points;
+        if (this.niveauDeVie < 0) {
+            this.niveauDeVie = 0;
+        }
+    }
+    
+    public void attaquer(Personnage cible) {
+    
+    }
+    
+    protected int obtenirDommagesDeLArme() {
+        if (armeEnMain == null) {
+            System.out.println(getNom() + " n'a pas d'arme equipee !");
+            return 0;
+        }
+        return armeEnMain.getNiveauAttaque();
+    }
+    
     @Override
     public String toString() {
         String description = "Nom: " + nom + ", Niveau de vie: " + niveauDeVie;
